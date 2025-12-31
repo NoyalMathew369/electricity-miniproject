@@ -1,1 +1,20 @@
+#code 1 output
+ Created temporal features: year, month, day, day_of_week, etc.
+
+#code 2 output
+ Created season feature for Kerala climate
+
+#code 3 output
+ Created lag features: 1-day, 7-day, 30-day
+
+#code 4 output
+Created rolling statistics: 7-day and 30-day averages
+
+#code 5 output
+Consumption Statistics:
+Mean consumption: 276.72 kWh
+Median consumption: 269.00 kWh
+Std deviation: 128.38 kWh
+Min consumption: 50.00 kWh
+Max consumption: 600.00 kWh
 
