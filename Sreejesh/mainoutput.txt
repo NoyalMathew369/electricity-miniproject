@@ -1,1 +1,18 @@
+#code block 1 output
+Converted 'date' to datetime format
 
+#code block 2 output 
+ Sorted data by household_id and date
+
+#code block 3 output
+ Duplicate rows found: 0
+
+#code block 4 output 
+ Handling missing values (2771 total)...
+
+#code block 5 output 
+ Missing values after cleaning: 1288
+
+#code block 6 output 
+ Outliers detected: 0
+ Consumption range: [-311.00, 844.00] kWh
