@@ -1,1 +1,84 @@
+#code1output
+ELECTRICITY CONSUMPTION FORECASTING - DATA PREPROCESSING
+#code2output
+Dataset loaded successfully!
+Shape: 3000 rows × 11 columns
+#code3output
+
+[STEP 2] Initial Data Exploration...
+
+First 5 rows:
+  household_id country   state   district area_type        date  month  \
+0         H020   India  Kerala  Ernakulam     Rural  2021-06-26   June   
+1         H139   India  Kerala   Palakkad       NaN  2021-04-05      4   
+2         H064     NaN  Kerala  Kozhikode       NaN  2022-03-29  March   
+3         H044   India  Kerala  Kozhikode     Urban  2022-05-30      5   
+4         H053   India  Kerala  Ernakulam     Urban  2022-02-08      2   
+
+   units_consumed_kwh  estimated_bill_rs peak_usage_flag            remarks  
+0               361.0                NaN             Yes  High summer usage  
+1                 NaN                NaN             Yes                NaN  
+2               291.0             1785.0              No       Normal usage  
+3               596.0             4554.0              No   Data unavailable  
+4                98.0              669.0             Yes  High summer usage  
+
+Dataset Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 3000 entries, 0 to 2999
+Data columns (total 11 columns):
+ #   Column              Non-Null Count  Dtype  
+---  ------              --------------  -----  
+ 0   household_id        3000 non-null   object 
+ 1   country             2777 non-null   object 
+ 2   state               2814 non-null   object 
+ 3   district            2780 non-null   object 
+ 4   area_type           2787 non-null   object 
+ 5   date                2796 non-null   object 
+ 6   month               2758 non-null   object 
+ 7   units_consumed_kwh  2756 non-null   float64
+ 8   estimated_bill_rs   2537 non-null   float64
+ 9   peak_usage_flag     2800 non-null   object 
+ 10  remarks             2424 non-null   object 
+dtypes: float64(2), object(9)
+memory usage: 257.9+ KB
+None
+
+Basic Statistics:
+       units_consumed_kwh  estimated_bill_rs
+count         2756.000000        2537.000000
+mean           277.488752        1910.409539
+std            128.101835         892.169503
+min             50.000000         314.000000
+25%            185.000000        1261.000000
+50%            269.000000        1849.000000
+75%            350.000000        2451.000000
+max            600.000000        4554.000000
+
+Missing Values:
+household_id            0
+country               223
+state                 186
+district              220
+area_type             213
+date                  204
+month                 242
+units_consumed_kwh    244
+estimated_bill_rs     463
+peak_usage_flag       200
+remarks               576
+dtype: int64
+
+Data Types:
+household_id           object
+country                object
+state                  object
+district               object
+area_type              object
+date                   object
+month                  object
+units_consumed_kwh    float64
+estimated_bill_rs     float64
+peak_usage_flag        object
+remarks                object
+dtype: object
 
