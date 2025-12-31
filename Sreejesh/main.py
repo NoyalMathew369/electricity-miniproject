@@ -1,22 +1,22 @@
-
+#code 1
 
 df['date'] = pd.to_datetime(df['date'])
 print(f"✓ Converted 'date' to datetime format")
-
+#code 2
 
 df = df.sort_values(['household_id', 'date']).reset_index(drop=True)
 print(f" Sorted data by household_id and date")
-
+#code 3
 duplicates = df.duplicated().sum()
 print(f" Duplicate rows found: {duplicates}")
 if duplicates > 0:
     df = df.drop_duplicates()
     print(f"  Removed {duplicates} duplicate rows")
-
+#code 4
 missing_before = df.isnull().sum().sum()
 if missing_before > 0:
     print(f"\n Handling missing values ({missing_before} total)...")
-
+#code 5
 df['units_consumed_kwh'].fillna(method='ffill', inplace=True)
 df['units_consumed_kwh'].fillna(method='bfill', inplace=True)
 
@@ -27,7 +27,7 @@ df['peak_usage_flag'].fillna(df['peak_usage_flag'].mode()[0], inplace=True)
 df['remarks'].fillna('Normal', inplace=True)
 
 print(f"  Missing values after cleaning: {df.isnull().sum().sum()}")
-
+#code 6
 Q1 = df['units_consumed_kwh'].quantile(0.25)
 Q3 = df['units_consumed_kwh'].quantile(0.75)
 IQR = Q3 - Q1
