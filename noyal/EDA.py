@@ -48,9 +48,10 @@ print(df.groupby('peak_usage_flag')['units_consumed_kwh'].describe().round(2))
 print("\n[STEP 6] Saving Preprocessed Data...")
 
 
-df_clean = df.dropna()
+df_clean = df.dropna(subset=['units_consumed_kwh'])
 
-print(f"✓ Removed {len(df) - len(df_clean)} rows with NaN in engineered features")
+
+print(f" Removed {len(df) - len(df_clean)} rows with NaN in engineered features")
 print(f"Final dataset shape: {df_clean.shape}")
 
 
@@ -58,7 +59,7 @@ print(f"Final dataset shape: {df_clean.shape}")
 #code part four
 
 df_clean.to_csv('preprocessed_electricity_data.csv', index=False)
-print(f"✓ Saved preprocessed data to 'preprocessed_electricity_data.csv'")
+print(f" Saved preprocessed data to 'preprocessed_electricity_data.csv'")
 
 
 
@@ -82,7 +83,7 @@ feature_list = ['year', 'month_num', 'day', 'day_of_week', 'day_name',
 for i, feat in enumerate(feature_list, 1):
     print(f"{i}. {feat}")
 
-print("\n✓ Dataset is ready for model training!")
+print("\n Dataset is ready for model training!")
 
 
 #code part six
