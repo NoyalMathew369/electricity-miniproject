@@ -1,1 +1,64 @@
+#code two output
+
+Consumption by Season:
+                mean  median     std
+season                              
+Monsoon       278.00   274.0  101.42
+Post-Monsoon  204.23   202.0   93.20
+Summer        402.37   401.0  116.96
+Winter        216.86   216.0  104.06
+
+Consumption by District (Top 5):
+district
+Palakkad      280.890653
+Ernakulam     279.881041
+Kozhikode     276.559441
+Trivandrum    276.154128
+Thrissur      273.392473
+Name: units_consumed_kwh, dtype: float64
+
+Peak Usage Statistics:
+                  count    mean     std   min    25%    50%    75%    max
+peak_usage_flag                                                          
+No               1659.0  278.56  127.35  50.0  187.5  272.0  351.0  600.0
+Yes              1341.0  274.44  129.65  50.0  176.0  266.0  348.0  598.0
+ 
+#code Three output
+
+ Saving Preprocessed Data...
+ Removed 3000 rows with NaN in engineered features
+Final dataset shape: (0, 26)
+
+#code four output
+ Saved preprocessed data to 'preprocessed_electricity_data.csv'
+#code four output
+
+
+PREPROCESSING COMPLETE!
+
+Final Dataset Summary:
+Total Records: 0
+Total Features: 26
+Date Range: NaT to NaT
+Unique Households: 0
+
+Features created:
+1. year
+2. month_num
+3. day
+4. day_of_week
+5. day_name
+6. week_of_year
+7. quarter
+8. is_weekend
+9. season
+10. consumption_lag_1
+11. consumption_lag_7
+12. consumption_lag_30
+13. rolling_mean_7
+14. rolling_std_7
+15. rolling_mean_30
+
+ Dataset is ready for model training!
+
 
